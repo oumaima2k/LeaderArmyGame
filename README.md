@@ -255,6 +255,60 @@ Affiche pour chaque véhicule :
 
 ---
 
+## MON EXPÉRIENCE
+
+### Pourquoi ce jeu ?
+
+Au début, les steering behaviors me semblaient assez abstraits. Mais en avançant, j’ai réalisé que ce sont exactement les mécanismes utilisés dans beaucoup de jeux pour gérer les déplacements (ennemis, groupes, évitement…).
+
+J’ai donc choisi de faire un jeu avec un leader et une armée pour pouvoir combiner plusieurs behaviors de façon visible et interactive, plutôt qu’une simple démo technique.
+
+---
+
+### Les comportements utilisés
+
+J’ai utilisé principalement :
+
+- **Arrive** pour le leader et les followers, pour avoir des déplacements fluides sans oscillation  
+- **Pursue** pour les ennemis, afin qu’ils anticipent les mouvements du joueur  
+- **Separation** pour éviter que les entités se superposent  
+- **Avoid** pour gérer les obstacles de manière réaliste  
+
+J’ai essayé de ne pas utiliser trop de behaviors, mais plutôt de bien comprendre et maîtriser ceux-ci.
+
+---
+
+### Réglage des paramètres
+
+Le réglage s’est fait surtout par tests en jouant.
+
+Le plus difficile était l’équilibre entre **Arrive** et **Separation** pour les followers :
+- trop d’Arrive → ils se collent
+- trop de Separation → la formation se casse
+
+C’est pour ça que j’ai ajouté des sliders, ce qui permet aussi de mieux comprendre l’impact de chaque comportement.
+
+---
+
+### Difficultés rencontrées
+
+- **Formation des followers** : gérer les positions par rapport au leader (repère local) a été assez compliqué au début  
+- **Effets visuels (glow, trails)** : p5.js ne propose pas directement ce genre d’effets, il a fallu utiliser le contexte canvas  
+- **Comportements combinés** : trouver les bons poids pour que les comportements fonctionnent ensemble de manière naturelle  
+
+---
+
+### Conclusion
+
+Ce projet m’a permis de mieux comprendre comment des comportements simples peuvent produire des mouvements réalistes lorsqu’ils sont combinés. C’était plus complexe que prévu, surtout pour les réglages, mais aussi très intéressant à implémenter.
+
+### Outils utilisés
+
+- **IDE** : Visual Studio Code avec l'extension Live Server pour recharger la page automatiquement
+- **IA** : Claude Sonnet (via Claude Code, le CLI d'Anthropic intégré dans VS Code)
+
+---
+
 ## Références
 
 - Craig Reynolds, *Steering Behaviors For Autonomous Characters*, GDC 1999
