@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leader Army Game — Steering Behaviors M2 MIAGE</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0a0a12;
+      color: #ccc;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #ffd700;
+      font-size: 1.4em;
+      padding: 10px 0 4px;
+      letter-spacing: 2px;
+    }
+
+    p.subtitle {
+      color: #888;
+      font-size: 0.8em;
+      padding-bottom: 8px;
+    }
+
+    /* Le canvas p5.js est injecté ici automatiquement */
+    canvas {
+      display: block;
+      border: 2px solid #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>⚔ LEADER ARMY GAME</h1>
+  <p class="subtitle">Steering Behaviors — Craig Reynolds | M2 MIAGE 2025-2026</p>
+
+  <!-- p5.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.min.js"></script>
+
+  <!-- Ordre de chargement : vehicle (base) → behaviorManager → entités → sketch -->
+  <script src="vehicle.js"></script>
+  <script src="behaviorManager.js"></script>
+  <script src="obstacle.js"></script>
+  <script src="leader.js"></script>
+  <script src="follower.js"></script>
+  <script src="enemy.js"></script>
+  <script src="eliteEnemy.js"></script>
+  <script src="projectile.js"></script>
+  <script src="powerUp.js"></script>
+  <script src="sketch.js"></script>
+
+</body>
+</html>
