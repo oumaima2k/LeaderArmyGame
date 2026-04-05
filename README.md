@@ -3,6 +3,13 @@
 
 ---
 
+## Demo en ligne
+
+Jouer directement dans le navigateur :
+**https://oumaima2k.github.io/LeaderArmyGame/**
+
+---
+
 ## Description
 
 Jeu interactif basé sur les **Steering Behaviors de Craig Reynolds**, développé en JavaScript avec **p5.js**.
@@ -11,7 +18,22 @@ Le joueur contrôle un **Leader** (triangle doré) à la souris. Une **armée de
 
 ---
 
-## Lancer le projet
+## Hébergement
+
+Le jeu est déployé via **GitHub Pages** depuis la branche `main`.
+Repo : https://github.com/oumaima2k/LeaderArmyGame
+
+Pour redéployer après modification :
+```bash
+git add .
+git commit -m "votre message"
+git push origin main
+# GitHub Pages se met à jour automatiquement en ~1 minute
+```
+
+---
+
+## Lancer le projet en local
 
 Ouvrir `index.html` dans un navigateur **avec un serveur local** (requis pour p5.js) :
 
